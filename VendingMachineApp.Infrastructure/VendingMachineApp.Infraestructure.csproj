@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VendingMachineApp.Application\VendingMachineApp.Application.csproj" />
+    <ProjectReference Include="..\VendingMachineApp.Domain\VendingMachineApp.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

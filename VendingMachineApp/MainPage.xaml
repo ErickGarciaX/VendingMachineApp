@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="VendingMachineApp.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Pagina Principal"
+    BackgroundColor="{StaticResource 1}">
+
+    <ScrollView Padding="30">
+
+        <Border
+            Padding="30"
+            BackgroundColor="{StaticResource 1}"
+            Shadow="{StaticResource DefaultShadow}"
+            Stroke="Transparent"
+            StrokeShape="RoundRectangle 60">
+            <VerticalStackLayout
+                BackgroundColor="{StaticResource 1}"
+                HorizontalOptions="Fill"
+                VerticalOptions="Fill">
+
+                <Grid
+                    RowDefinitions="*,*,*"
+                    RowSpacing="100"
+                    VerticalOptions="Fill">
+
+                    <Grid
+                        Grid.Row="0"
+                        RowDefinitions="*,*,*"
+                        RowSpacing="25"
+                        VerticalOptions="Start">
+
+                        <Label
+                            Grid.Row="0"
+                            FontAttributes="Bold"
+                            Style="{StaticResource Label}"
+                            Text="Bienvendido al simulador de maquina de estados finito"
+                            TextColor="{StaticResource 3}" />
+
+                        <Label
+                            Grid.Row="1"
+                            Style="{StaticResource Label}"
+                            Text="Maquina expendedora " />
+
+                        <Button
+                            x:Name="CounterBtn"
+                            Grid.Row="2"
+                            Clicked="OnCounterClicked"
+                            Style="{StaticResource Boton}"
+                            Text="Maquina Expendedora"
+                            WidthRequest="350" />
+                    </Grid>
+
+                    <Grid
+                        Grid.Row="1"
+                        RowDefinitions="*,*"
+                        RowSpacing="25">
+
+                        <Label
+                            Grid.Row="0"
+                            FontAttributes="Bold"
+                            Style="{StaticResource Label}"
+                            Text="Centro Universitario de Ciencias Exactas e ingenierías " />
+
+                        <Label
+                            Grid.Row="1"
+                            FontAttributes="Italic"
+                            Style="{StaticResource Label}"
+                            Text="Proyecto Final: Maquina de estado finito "
+                            TextColor="{StaticResource 3}" />
+
+                    </Grid>
+
+                    <Grid
+                        Grid.Row="2"
+                        ColumnDefinitions="*,*"
+                        VerticalOptions="End">
+
+                        <Grid
+                            Grid.Column="0"
+                            Grid.ColumnSpan="1"
+                            RowDefinitions="*"
+                            RowSpacing="25">
+
+
+                            <Image
+                                Grid.Row="2"
+                                HeightRequest="300"
+                                Source="udg.png"
+                                WidthRequest="300" />
+
+
+
+                        </Grid>
+
+
+                        <Grid
+                            Grid.Column="1"
+                            RowDefinitions="*,*,*,*,*"
+                            RowSpacing="25">
+
+                            <Label
+                                Grid.Row="0"
+                                Style="{StaticResource Label}"
+                                Text="Materia: Teoría de la computación" />
+
+                            <Label
+                                Grid.Row="1"
+                                Style="{StaticResource Label}"
+                                Text="Carrera: Ingeniería en Computación   " />
+
+                            <Label
+                                Grid.Row="2"
+                                FontAttributes="Bold"
+                                FontSize="28"
+                                Style="{StaticResource Label}"
+                                Text="Alumnos: "
+                                TextColor="{StaticResource 3}" />
+
+                            <Label
+                                Grid.Row="3"
+                                FontAttributes="Italic"
+                                FontSize="28"
+                                Style="{StaticResource Label}"
+                                Text="Erick Noel García Padilla" />
+
+                            <Label
+                                Grid.Row="4"
+                                FontAttributes="Italic"
+                                FontSize="28"
+                                Style="{StaticResource Label}"
+                                Text="Jose Eduardo Gomez Mora " />
+
+
+                        </Grid>
+
+                    </Grid>
+
+                </Grid>
+
+
+
+
+            </VerticalStackLayout>
+        </Border>
+    </ScrollView>
+
+</ContentPage>

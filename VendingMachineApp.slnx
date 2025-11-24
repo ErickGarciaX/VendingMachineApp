@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="VendingMachineApp.Application/VendingMachineApp.Application.csproj" Id="86e496c2-e985-4898-9a95-52451173acad" />
+  <Project Path="VendingMachineApp.Domain/VendingMachineApp.Domain.csproj" Id="d0489323-5c42-47d6-aa23-4796c1eb567f" />
+  <Project Path="VendingMachineApp.Infrastructure/VendingMachineApp.Infraestructure.csproj" Id="f51b0f26-fa2a-4280-8b99-5aeb10b7c179" />
+  <Project Path="VendingMachineApp/VendingMachineApp.csproj" />
+</Solution>

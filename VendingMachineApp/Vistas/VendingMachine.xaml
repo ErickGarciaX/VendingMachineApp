@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="VendingMachineApp.Vistas.VendingMachine"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Vending Machine"
+    BackgroundColor="{StaticResource 1}">
+
+    <ScrollView Padding="30">
+
+        <Border
+            Padding="30"
+            BackgroundColor="{StaticResource 1}"
+            Shadow="{StaticResource DefaultShadow}"
+            Stroke="Transparent"
+            StrokeShape="RoundRectangle 60">
+
+            <Grid RowDefinitions="*,*,*" RowSpacing="25">
+
+                <Grid
+                    Grid.Row="0"
+                    HorizontalOptions="Center"
+                    RowDefinitions="*,*"
+                    VerticalOptions="Start">
+
+                    <Label
+                        Grid.Row="0"
+                        FontAttributes="Bold"
+                        FontSize="48"
+                        HorizontalOptions="Center"
+                        Style="{StaticResource Label}"
+                        Text="{Binding CurrentStateText}"
+                        TextColor="{StaticResource 3}" />
+
+                    <Label
+                        Grid.Row="1"
+                        FontAttributes="Italic"
+                        FontSize="32"
+                        HorizontalOptions="Center"
+                        Style="{StaticResource Label}"
+                        Text="{Binding LastMessage}" />
+                </Grid>
+
+                <Grid
+                    Grid.Row="1"
+                    HorizontalOptions="Center"
+                    RowDefinitions="*,*"
+                    VerticalOptions="Start">
+
+                    <Image
+                        Aspect="AspectFit"
+                        HeightRequest="300"
+                        Source="vendingmachine.png"
+                        WidthRequest="300" />
+
+                </Grid>
+
+
+                <Grid
+                    Grid.Row="2"
+                    ColumnDefinitions="*,*,*,*"
+                    ColumnSpacing="15"
+                    HorizontalOptions="Center"
+                    RowDefinitions="*,*,*"
+                    RowSpacing="15"
+                    VerticalOptions="Start">
+
+                    <Button
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Command="{Binding InsertCoin1Command}"
+                        Style="{StaticResource BotonMaquina}"
+                        Text="Ingresar 1" />
+
+                    <Button
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Command="{Binding InsertCoin2Command}"
+                        Style="{StaticResource BotonMaquina}"
+                        Text="Ingresar 2" />
+
+                    <Button
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Command="{Binding InsertCoin5Command}"
+                        Style="{StaticResource BotonMaquina}"
+                        Text="Ingresar 5" />
+
+                    <Button
+                        Grid.Row="0"
+                        Grid.Column="3"
+                        Command="{Binding InsertCoin10Command}"
+                        Style="{StaticResource BotonMaquina}"
+                        Text="Ingresar 10" />
+
+                    <Button
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Command="{Binding BuyACommand}"
+                        Style="{StaticResource BotonMaquina}"
+                        Text="Comprar A (12)" />
+
+                    <Button
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Command="{Binding BuyBCommand}"
+                        Style="{StaticResource BotonMaquina}"
+                        Text="Comprar B (15)" />
+
+                    <Button
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Command="{Binding CancelCommand}"
+                        Style="{StaticResource BotonMaquina}"
+                        Text="Cancelar" />
+                    <Button
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Command="{Binding ResetCommand}"
+                        Style="{StaticResource BotonMaquina}"
+                        Text="Reiniciar" />
+
+                    <Button
+                        x:Name="BtnBack"
+                        Grid.Row="2"
+                        Grid.Column="7"
+                        Pressed="BtnBack_Pressed"
+                        Style="{StaticResource BotonMaquina}"
+                        Text="Salir" />
+
+                </Grid>
+
+            </Grid>
+        </Border>
+    </ScrollView>
+
+</ContentPage>
