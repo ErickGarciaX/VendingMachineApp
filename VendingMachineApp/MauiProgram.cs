@@ -19,13 +19,14 @@ namespace VendingMachineApp
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
-#if DEBUG
-            
-            builder.Logging.AddDebug();
-
             builder.Services.AddSingleton<IStateMachineService, StateMachineService>();
             builder.Services.AddTransient<VendingMachineViewModel>();
             builder.Services.AddTransient<VendingMachine>();
+
+#if DEBUG
+
+            builder.Logging.AddDebug();
+          
 #endif
 
             return builder.Build();
