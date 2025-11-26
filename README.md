@@ -184,6 +184,7 @@ Este proyecto demuestra:
 
 **Erick Garcia**
 - GitHub: [@ErickGarciaX](https://github.com/ErickGarciaX)
+
 **Eduardo Gómez**
 - GitHub: [@EduardoGMora](https://github.com/EduardoGMora)
 
