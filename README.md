@@ -8,11 +8,14 @@ Aplicación de máquina expendedora (Vending Machine) desarrollada como ejemplo 
 
 Este proyecto es una implementación práctica de una **Máquina de Estados Finitos Determinista (DFA)** donde:
 
-- **Estados (Q)**: Representan el balance actual de dinero (0-20) y estados especiales (dispensar producto, devolver cambio)
+- **Estados (Q)**: Representan el balance actual de dinero (0-20) y estados especiales (dispensar productoA, dispensar productoB, cancelar y devolver cambio)
 - **Alfabeto (Σ)**: Monedas (1, 2, 5, 10) y acciones (comprar A, comprar B, cancelar)
+    - Σ = {1, 2, 5, d, A, B, C}
+
 - **Función de Transición (δ)**: Lógica que procesa las entradas y cambia de estado
 - **Estado Inicial (q₀)**: balance0 (sin dinero)
 - **Estados Finales (F)**: dispenseA, dispenseB, returnChange
+    - F = {qdispA, qdispB, qerr y qret}
 
 ### Diagrama de Estados
 
