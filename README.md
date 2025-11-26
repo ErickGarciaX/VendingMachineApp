@@ -125,33 +125,6 @@ VendingMachineApp/
 4. **Ejecutar**:
    - Presionar F5 o hacer clic en el botón de ejecutar
 
-## 💻 Ejemplo de Uso
-
-```csharp
-// Crear instancia de la máquina
-var machine = new StateMachine();
-
-// Estado inicial
-Console.WriteLine(machine.CurrentState); // balance0
-
-// Insertar moneda de $10
-var result = machine.ProcessEntry(Entrys.Coin10);
-Console.WriteLine(machine.CurrentState); // balance10
-
-// Insertar moneda de $5
-result = machine.ProcessEntry(Entrys.Coin5);
-Console.WriteLine(machine.CurrentState); // balance15
-
-// Comprar producto B ($15)
-result = machine.ProcessEntry(Entrys.buttonBuyB);
-Console.WriteLine(result.Message); // "Producto entregado."
-Console.WriteLine(machine.CurrentState); // dispenseB
-
-// Reset automático
-machine.Reset();
-Console.WriteLine(machine.CurrentState); // balance0
-```
-
 ## 🧪 Casos de Prueba
 
 ### Caso 1: Compra exitosa
